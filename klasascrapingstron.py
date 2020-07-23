@@ -12,7 +12,12 @@ class Noweartykuly:
     #def pobierz_a_do_listy(self):
         
     def pobranie_strony_artykulow(self):
-        link = urlopen(self.strona)
+        try:
+            link = urlopen(self.strona)            
+        except HTTPError as e:
+            print(e)
+        except URLError as e:
+            print(e)
         bs = BeautifulSoup(link.read(),'html.parser')
         lista = bs.findAll(self.znacznik)
         return self.lista
