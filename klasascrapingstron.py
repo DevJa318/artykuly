@@ -9,6 +9,7 @@ class Noweartykuly:
         self.strona = s
         self.znacznik = z
         self.plik = p
+        print("Utworzono!")
     #def pobierz_a_do_listy(self):
         
     def pobranie_strony_artykulow(self):
